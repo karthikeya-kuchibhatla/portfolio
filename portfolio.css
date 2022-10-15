@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+  --contrast-color: #EA1111;
+  --secondary-color: black;
+  --primary-color: #2E4053;
+  --complimentary-color: #117A65;
+  --light-color:#c7d1df ;
+  }
+
+  .container {
+    background: #191919;
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  nav a {
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  nav {
+      position: fixed;
+      left: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      background: var(--secondary-color);
+  }
+  
+  section {
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      opacity: 0;
+      transition: all ease-in .5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  } 
+  
+  section h1 {
+      color: #fff;
+      font-size: 50px;
+      text-transform: uppercase;
+      opacity: 0;
+  }
+  
+  /* Styles applied on trigger */
+  section:target {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+  }
+  
+  section:target h1 {
+      opacity: 0;
+      animation: 2s fadeIn forwards .5s;
+  }
+  
+  #first {
+    background:var(--primary-color);
+  }
+  #second {
+      background: var(--complimentary-color);
+  }
+  
+  #third {
+      background: var(--contrast-color);
+  }
+  
+  #fourth {
+      background: var(--light-color);
+  }
+  
+  @keyframes fadeIn {
+      100% { opacity:1 }
+  }
+  .container {
+      background-color: whitesmoke;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .link {
+      height: 70px;
+      width: 70px;
+      background-color: #caf7e3;
+      border-radius: 35px;
+      text-align: center;
+      margin: 7px;
+      line-height: 80px;
+  }
+
+  a i {
+      transition: all 0.3s linear;
+  }
+  a:hover i {
+      transform: scale(1.5);
+  }
+  .facebook:hover {
+      color: blue;
+  }
+  .instagram:hover {
+      color: #e11d74;
+  }
+  .twitter:hover {
+      color: #00adb5;
+  }
+  .github:hover {
+      color: black;
+  }
+  .linkedin:hover {
+      color: #04009a;
+  }
+  
